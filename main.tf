@@ -35,16 +35,16 @@ EOF
 
 resource "aws_s3_bucket_object" "index" {
   bucket = var.domain_name
-  key = "index.html"
-  source = "index.html"
+  key = var.index_file
+  source = var.index_file
   content_type = "text/html"
-  etag = filemd5("index.html")
+  etag = filemd5(var.index_file)
 }
 
 resource "aws_s3_bucket_object" "error" {
   bucket = var.domain_name
-  key = "error.html"
-  source = "error.html"
+  key = var.error_file
+  source = var.error_file
   content_type = "text/html"
-  etag = filemd5("error.html")
+  etag = filemd5(var.error_file)
 }
