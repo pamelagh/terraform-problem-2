@@ -4,12 +4,12 @@ variable domain_name {
 
 variable error_file {
   type        = string
-  default = "error.html"
+  default     = "error.html"
 }
 
 variable index_file {
   type        = string
-  default = "index.html"
+  default     = "index.html"
 }
 
 variable profile {
