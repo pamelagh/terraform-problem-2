@@ -1,8 +1,12 @@
-variable region {
+variable domain_name {
   type        = string
-//  default     = "us-east-1"
 }
 
-variable domain_name {
+variable profile {
+  type        = string
+  default     = "default"
+}
+
+variable region {
   type        = string
 }
