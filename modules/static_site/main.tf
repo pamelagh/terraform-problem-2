@@ -35,7 +35,7 @@ resource "aws_s3_bucket_object" "index" {
   content_type = "text/html"
   etag = filemd5(var.index_file)
   depends_on = [
-    aws_s3_bucket.problem-bucket,
+    aws_s3_bucket.problem-bucket
   ]
 }
 
@@ -46,6 +46,6 @@ resource "aws_s3_bucket_object" "error" {
   content_type = "text/html"
   etag = filemd5(var.error_file)
   depends_on = [
-    aws_s3_bucket.problem-bucket,
+    aws_s3_bucket.problem-bucket
   ]
 }
