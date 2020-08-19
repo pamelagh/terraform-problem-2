@@ -38,7 +38,7 @@ resource "aws_s3_bucket_object" "index" {
   key = "index.html"
   source = "index.html"
   content_type = "text/html"
-  etag = "${md5(file("index.html"))}"
+  etag = filemd5("index.html")
 }
 
 resource "aws_s3_bucket_object" "error" {
@@ -46,5 +46,5 @@ resource "aws_s3_bucket_object" "error" {
   key = "error.html"
   source = "error.html"
   content_type = "text/html"
-  etag = "${md5(file("error.html"))}"
+  etag = filemd5("error.html")
 }
