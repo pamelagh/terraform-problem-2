@@ -1,6 +1,6 @@
 # terraform-problem-2
 
-Set to solve the following problem:
+Solution for the following problem:
 
 Create a S3 bucket to host a web application with terraform.
 Must modularize script with variables.
